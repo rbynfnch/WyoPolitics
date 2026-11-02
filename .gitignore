@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+
+# Pipeline output
+data/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.sqlite
+*.db
+
+# Site
+node_modules/
+site/dist/
+site/.astro/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
