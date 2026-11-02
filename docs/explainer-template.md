@@ -43,7 +43,7 @@ And at the end, before Sources:
 - Two sections, `supporters` and `opponents`, using the identical component, format, and limits: up to **[DECIDE] 3** arguments each, each up to **[DECIDE] 50** words.
 - Each argument is a paraphrase of a public statement, attributed to a named person or organization, with a link and date. Short quoted phrases only.
 - No statement found for a side: "We found no public statements {supporting|opposing} this bill as of {last_checked}." Never pad.
-- **`argument_order`** is set by code, not by the drafter: **[DECIDE]** proposed rule: supporters first when the bill number is even, opponents first when odd.
+- **`argument_order`** is set by code, not by the drafter: supporters first when the bill number is even, opponents first when the bill number is odd. The same rule applies to every bill.
 - Legislators' floor statements count as public statements. Sponsors are not automatically listed as supporters.
 
 ## Writing rules
@@ -131,6 +131,6 @@ Required on every published item: `bill_id`, `tier`, `rule_version`, `reviewed_b
 }
 ```
 
-Tier 2 items omit `current_law`, `applies_to`, `supporters`, `opponents`, `argument_order`, `no_statements_found`, `amendments`, and `glossary`. Tier 3 items are listings with only the code-filled fields, plus `sources`, `last_checked`, and the required review fields. Under `CLAUDE.md` rule 3, Tier 3 listings also need a reviewer, review date, and passing verifier (code checks only). **[DECIDE]** Whether a reviewer can approve Tier 3 listings in a batch.
+Tier 2 items omit `current_law`, `applies_to`, `supporters`, `opponents`, `argument_order`, `no_statements_found`, `amendments`, and `glossary`. Tier 3 items are listings with only the code-filled fields, plus `sources`, `last_checked`, and the required review fields. Under `CLAUDE.md` rule 3, Tier 3 listings also need a reviewer, review date, and passing verifier (code checks only). A reviewer may approve Tier 3 listings in a batch: one approval covers every listing in that batch, and each listing records the same `reviewed_by` and `reviewed_at`. Batch approval is not allowed for Tier 2 or Tier 1.
 
 Vote type is `roll_call` or `voice`. Voice votes carry no counts and no individual votes. Individual roll-call votes live in separate files, one per roll call, under `content/votes/`.

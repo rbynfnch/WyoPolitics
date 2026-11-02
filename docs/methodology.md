@@ -63,7 +63,7 @@ On full explainers we summarize public arguments for and against a bill.
 
 - Arguments come only from public, attributable statements: testimony, press releases, op-eds, official letters. Each one is linked.
 - Both sides use the same format, length limits, and design.
-- The order of the two sides follows a fixed rule (see the explainer template), not our judgment.
+- The order of the two sides follows a fixed rule, not our judgment: supporters first for even-numbered bills, opponents first for odd-numbered bills.
 - If we find no public statement for one side, we say: "We found no public statements [supporting/opposing] this bill as of [date]." We never invent an argument to fill the gap.
 
 ## Keeping pages current
