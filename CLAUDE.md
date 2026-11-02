@@ -7,6 +7,7 @@ A nonpartisan information project that translates Wyoming legislative records in
 - Editorial standard: @docs/methodology.md
 - Which bills get which coverage: @docs/tier-criteria.md
 - Page templates, writing rules, verifier checklist, output schema: @docs/explainer-template.md
+- Settled decisions, adopted defaults, and open items: @docs/decisions.md
 
 These documents are binding. If a task conflicts with them, stop and ask. Do not resolve the conflict yourself.
 
@@ -97,7 +98,14 @@ The public site is a **static site** generated from `content/`. **[CONFIRM]** As
 
 ## What to do when unsure
 
-Stop, say what is unclear, and ask. A wrong plain-English explanation of a bill does more harm than no explanation. When in doubt, leave it out and flag it for the human.
+First check `docs/decisions.md` and the other documents in `docs/`. Don't ask about anything already decided or covered by a default there.
+
+Then sort the question:
+
+- **Editorial, legal, safety, or accuracy questions** (what a bill does, tier rules, publish gate, campaign finance data, anything touching the hard rules): stop, say what is unclear, and ask. A wrong plain-English explanation of a bill does more harm than no explanation. When in doubt, leave it out and flag it for the human.
+- **Implementation details** (file names, internal structure, library choices within the approved stack): pick the simplest reasonable option, proceed, and say what you chose in your summary.
+
+When you do need answers, ask once. Give one numbered list, each item with your recommended default, and keep working on anything that doesn't depend on the answers. Record answers in `docs/decisions.md`.
 
 ## Changing these instructions
 
