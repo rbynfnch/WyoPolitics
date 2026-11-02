@@ -61,7 +61,7 @@ All routes derive from content files. Slugs use lowercase bill IDs (for example 
 - **Tier 2:** the Tier 2 template from `docs/explainer-template.md`.
 - **Tier 1:** the full template, including "Why this bill got a full explainer".
 
-Render sections in the order the content specifies, using `argument_order` from the JSON for supporters and opponents. Never compute your own ordering.
+Render sections in the order the content specifies, using `argument_order` from the JSON for supporters and opponents. Never compute your own ordering. (The pipeline sets it: supporters first on even-numbered bills, opponents first on odd-numbered bills.)
 
 ### Required components
 
@@ -72,7 +72,7 @@ Render sections in the order the content specifies, using `argument_order` from 
 - **StaleBanner:** shown when content marks a bill as changed since last review.
 - **CorrectionNote:** shown at the top of a page when a correction exists for it.
 - **VoteTable:** one row per legislator. Columns: name, party (text), district, vote. Default sort alphabetical by last name. Vote shown as text plus icon. Notes when a stage was decided by voice vote and has no individual votes. No coloring by party.
-- **ConflictDisclosure:** rendered only when content includes one.
+- **ConflictDisclosure:** rendered only when content includes one, as a visible block directly under the page title.
 
 ## SEO and discoverability
 

@@ -55,7 +55,15 @@ Every bill gets a basic listing. Some get a short explainer (Tier 2) or a full e
 4. A separate AI check, plus automated checks, compare every statement against the bill and our checklist. Anything without a matching bill section is removed.
 5. **A named human reviewer reads and approves every item.** Nothing is published without a reviewer's name, a review date, and a passing check. Each page shows "Reviewed by [name] on [date]."
 
-We disclose AI use because it is part of how this work gets done. Responsibility for what we publish belongs to the human reviewer and to us. **[DECIDE]** Whether reviewer names are full names or initials.
+We disclose AI use because it is part of how this work gets done. Responsibility for what we publish belongs to the human reviewer and to us. Reviewers are named in full on every page they approve.
+
+### Drafting and checking rules, in plain language
+
+- The AI writes words, never facts. Numbers, names, dates, and votes are filled in by software from official records.
+- Every explanation must point to the section of the bill it describes. If it can't, it is deleted.
+- No opinion words, predictions, guesses about motives, or recommendations.
+- The checking step is a separate AI call with its own instructions, plus automated tests. It can only delete statements, not rewrite them.
+- Explainers are approved one at a time. Basic listings, which contain only official data, can be approved in a batch.
 
 ## Supporters and opponents
 
@@ -77,9 +85,9 @@ We will make mistakes. When we do:
 - **Substantive corrections** (a wrong fact, a wrong explanation, a missing or wrong citation) get a visible note at the top of the page saying what changed and when, and an entry in the public [corrections log](/corrections/).
 - **Minor fixes** (typos, formatting, broken links) are made without a note.
 - We never silently rewrite a published fact.
-- The full edit history of every page is public in our git repository. **[DECIDE]** Link to the public repository, or keep it private?
+- The full edit history of every published page is public. Published content is automatically copied to a public repository, where every change is recorded. **[DECIDE] public repository link, once it exists.**
 
-To report an error: **[DECIDE] contact method**.
+To report an error, email **[DECIDE] corrections address on the site's domain, once the name is chosen.**
 
 ## Same rules for everyone
 
@@ -87,4 +95,12 @@ Every check, template, and rule applies equally to every legislator, party, and 
 
 ## Funding and conflicts of interest
 
-**[DECIDE]** Who funds this project, whether it carries ads or sponsors, and how sponsors are kept separate from content. Any conflict of interest relevant to a specific bill is disclosed on that bill's page.
+This project is run by Elevartemis, which funds its initial costs. An editorial firewall separates the project's content from Elevartemis's other work.
+
+- We accept no grants, no government funding, and no money from candidates, campaigns, or political committees.
+- There are no ads at launch.
+- If ads or sponsors are added later, they will be clearly labeled, and sponsors will never see or approve content before it is published.
+
+Any conflict of interest relevant to a specific bill is disclosed in a visible block directly under that bill page's title.
+
+**[DECIDE]** Whether to disclose the owners' political donations.

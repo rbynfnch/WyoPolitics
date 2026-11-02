@@ -41,12 +41,12 @@ Data flows one way. Later stages read earlier stages' outputs and never rewrite 
 
 ## Website and content contract
 
-The public site is a **static site** generated from `content/`. **[CONFIRM]** Astro is the current choice. Hugo is the alternative.
+The public site is a **static site** generated from `content/`, built with Astro (see `docs/decisions.md`).
 
 - The pipeline and the site share only the JSON files in `content/`. The site never calls an LLM, an API, or a database at build or run time.
 - JSON shapes are defined once as Pydantic models in `src/schemas/`, and exported as JSON Schema files into `schemas/`. The site build validates every file in `content/` against them and **fails the build** on any mismatch.
 - Every published item must include: `bill_id`, `tier`, `rule_version`, `reviewed_by`, `reviewed_at`, `verifier_passed`, `last_checked`, and source links. Items missing any of these fail validation.
-- `content/` is committed to git on purpose. The git history is the public audit trail for edits and corrections.
+- `content/` is committed to git on purpose. This pipeline repo is private; `content/` is automatically mirrored to a separate public repo, whose git history is the public audit trail for edits and corrections.
 - Corrections: a substantive fix adds an entry to `content/corrections/` and a visible note on the page, per `docs/methodology.md`. Never silently rewrite a published fact.
 - Newsletter sign-up, reader-request form, and site search use third-party services or small embeds. Don't add one without asking.
 - The site contains no secrets and no tracking or ad code until the human approves the specific vendor.
@@ -69,7 +69,7 @@ The public site is a **static site** generated from `content/`. **[CONFIRM]** As
 - Runs on the owner's **Windows PC**, using **Git Bash**. Give commands in bash syntax with forward slashes. Avoid PowerShell-only commands. Use `pathlib` in Python so paths work on Windows.
 - The repo is hosted on **GitHub**. Never commit `.env`, `data/`, `logs/`, or API keys. Check `.gitignore` before the first commit and before adding any new output folder.
 - Pipeline stack: Python 3.11+, Pydantic for schemas and validating all LLM output, pytest for tests, SQLite for local storage. Manage dependencies with a lockfile and a virtual environment. Python is confirmed. Don't add other frameworks without asking.
-- Site stack: Node with Astro **[CONFIRM]**, kept inside `site/` with its own lockfile.
+- Site stack: Node with Astro, kept inside `site/` with its own lockfile.
 - Secrets (API keys) live in `.env`, which is gitignored. Never print, log, or commit secrets.
 - Commands **[FILL IN once the tooling exists]**:
   - Run tests: `pytest`

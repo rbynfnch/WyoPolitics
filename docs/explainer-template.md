@@ -14,11 +14,11 @@ The drafter never writes a number, date, name, or vote. Where text needs one, it
 
 ## Tier 2 page (in this order)
 
-1. **Title and status** (code)
+1. **Title and status** (code), followed directly by the **conflict disclosure** block when one exists (reviewer)
 2. **At a glance** (code): sponsors, introduced date, current status, last action, effective date if any
 3. **What the bill does**: one-sentence summary (Explanation, cited)
 4. **Main provisions**: 2 to 6 items, each one sentence or two, each with a section cite (Explanation)
-5. **Cost**: figures from the fiscal note (Fact). If none: "No fiscal note has been published for this bill as of {last_checked}."
+5. **Cost**: figures from the fiscal note (Fact). If no fiscal note: "No fiscal note has been published for this bill as of {last_checked}." If the note gives no single figure (indeterminate or a range): "The fiscal note does not give a single cost figure." followed by a link to the note.
 6. **Votes**: roll-call totals per stage, link to full vote table. Voice votes noted as such (Fact)
 7. **Unknowns**: 1 to 4 items. If none: "The bill text and fiscal note answer the questions we checked." (Unknowns)
 8. **Sources** and **Last checked** (code)
